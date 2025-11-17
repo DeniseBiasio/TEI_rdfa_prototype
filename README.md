@@ -8,7 +8,8 @@ Il progetto è diviso in due cartelle, corrispondenti a due metodi diversi di ge
 1. Prova_TEI_RDFA
 
 🔹 TEI con RDFa integrati + XSLT
-Pipeline 1 — TEI con RDFa integrato + XSLT
+
+Pipeline 1 - TEI con RDFa integrato + XSLT
 
 In questa versione ho sperimentato l’inserimento diretto degli attributi RDFa dentro il TEI.
 
@@ -22,7 +23,8 @@ Questo approccio funziona bene per oggetti legati alla performance (video, immag
 
 
 🔹 2. Prova_TEI_RDF
-Pipeline 2 — TEI conforme + RDF esterno + XSLT
+
+Pipeline 2 - TEI conforme + RDF esterno + XSLT
 
 Qui ho provato la soluzione opposta:
 
