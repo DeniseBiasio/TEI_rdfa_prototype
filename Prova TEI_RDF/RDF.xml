@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:schema="http://schema.org/"
+   xmlns:frbroo="http://iflastandards.info/ns/fr/frbr/frbroo/"
+   xml:base="Video_2009.xml">
+   
+   <frbroo:F1_Work rdf:about="#Work_CU">
+      <schema:name>Capitano Ulisse</schema:name>
+      <schema:creator rdf:resource="#AS"/>
+   </frbroo:F1_Work>
+ 
+   <schema:Person rdf:about="#AS">
+      <schema:name>Alberto Savinio</schema:name>
+   </schema:Person>
+   
+   <schema:Person rdf:about="#SM">
+      <schema:name>Simone Migliorini</schema:name>
+      <schema:jobTitle>Regista</schema:jobTitle>
+   </schema:Person>
+
+   <schema:Place rdf:about="https://www.geonames.org/10401264">
+      <schema:name>Teatro Romano di Volterra</schema:name>
+   </schema:Place>
+
+   <frbroo:F31_Performance rdf:about="#Perf_Volterra_2009">
+      <frbroo:R80_performed rdf:resource="#Work_CU"/>
+      <schema:location rdf:resource="https://www.geonames.org/10401264"/>
+      <schema:startDate>2009-07-28</schema:startDate>
+      <schema:endDate>2009-07-29</schema:endDate>
+   </frbroo:F31_Performance>
+   
+   <frbroo:F26_Recording rdf:about="#Atto1_Parte1">
+      <frbroo:R81_is_recorded_in rdf:resource="#Perf_Volterra_2009"/>
+      <schema:director rdf:resource="#SM"/>
+      <schema:contentUrl>
+         https://www.youtube.com/watch?v=cBRyzjBWw_k&amp;t=24s
+         
+      </schema:contentUrl>
+   </frbroo:F26_Recording>
+   
+</rdf:RDF>
