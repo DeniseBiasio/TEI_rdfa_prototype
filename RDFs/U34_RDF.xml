@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:frbroo="http://iflastandards.info/ns/fr/frbr/frbroo/"
+   xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/"
+   xmlns:dct="http://purl.org/dc/terms/"
+   xmlns:schema="http://schema.org/"
+   xml:base="https://YOURDOMAIN.github.io/capitanoulisse/">
+   
+   <!-- ===== Minimal anchors (safe repeats) ===== -->
+   <frbroo:F1_Work rdf:about="id/work/CU">
+      <schema:name xml:lang="it">Capitano Ulisse</schema:name>
+   </frbroo:F1_Work>
+   
+   <frbroo:F2_Expression rdf:about="id/expr/print1934">
+      <dct:type>Printed edition text (1934)</dct:type>
+      <schema:url rdf:resource="U34.html"/>
+      <schema:relatedLink rdf:resource="performance-objects.html"/>
+   </frbroo:F2_Expression>
+   
+   <!-- ===== Plan + Performance (Solution B) ===== -->
+   <frbroo:F25_Performance_Plan rdf:about="id/plan/1990">
+      <schema:name>Performance plan (1990) — adapted for staging</schema:name>
+      <dct:date>1990</dct:date>
+      <dct:source rdf:resource="id/expr/print1934"/>
+   </frbroo:F25_Performance_Plan>
+   
+   <frbroo:F31_Performance rdf:about="id/perf/1991">
+      <schema:name>Staging of Capitano Ulisse (1991)</schema:name>
+      <dct:date>1991</dct:date>
+      <frbroo:R25_performed rdf:resource="id/plan/1990"/>
+      
+      <!-- Director + place (fill if you have them) -->
+      <schema:director rdf:resource="id/person/director-1991"/>
+      <schema:location rdf:resource="id/place/perf-1991"/>
+   </frbroo:F31_Performance>
+   
+   <schema:Person rdf:about="id/person/director-1991">
+      <schema:name>TODO_DIRECTOR_NAME_1991</schema:name>
+      <!-- authority -->
+      <!-- <schema:sameAs rdf:resource="https://www.wikidata.org/entity/Q..."/> -->
+      <!-- <schema:sameAs rdf:resource="https://viaf.org/viaf/..."/> -->
+   </schema:Person>
+   
+   <schema:Place rdf:about="id/place/perf-1991">
+      <schema:name>TODO_PLACE_1991</schema:name>
+      <!-- GeoNames/Wikidata if you have -->
+      <!-- <schema:sameAs rdf:resource="https://www.geonames.org/..."/> -->
+   </schema:Place>
+   
+   <!-- ===== The performance-related object ===== -->
+   <crm:E31_Document rdf:about="id/doc/article-1991">
+      <dct:type>Newspaper / journal article</dct:type>
+      
+      <!-- web page of your object -->
+      <schema:url rdf:resource="objects/article-1991.html"/>
+      
+      <!-- file/pdf/URL if present -->
+      <schema:encodingFormat>application/pdf</schema:encodingFormat>
+      <schema:contentUrl rdf:resource="pdf/Article1991.pdf"/>
+      <!-- <schema:url rdf:resource="https://... online article url ..."/> -->
+      
+      <!-- bibliographic metadata -->
+      <dct:title xml:lang="it">TODO_ARTICLE_TITLE</dct:title>
+      <dct:date>1991</dct:date>
+      <dct:creator rdf:resource="id/person/journalist-1991"/>
+      <dct:publisher rdf:resource="id/org/newspaper-1991"/>
+      
+      <!-- CORE: this document documents the performance -->
+      <crm:P70_documents rdf:resource="id/perf/1991"/>
+      
+      <!-- UX convenience (optional): link back to print edition page -->
+      <schema:relatedLink rdf:resource="U34.html"/>
+   </crm:E31_Document>
+   
+   <schema:Person rdf:about="id/person/journalist-1991">
+      <schema:name>TODO_JOURNALIST_NAME</schema:name>
+      <!-- authority -->
+      <!-- <schema:sameAs rdf:resource="https://www.wikidata.org/entity/Q..."/> -->
+      <!-- <schema:sameAs rdf:resource="https://viaf.org/viaf/..."/> -->
+   </schema:Person>
+   
+   <schema:Organization rdf:about="id/org/newspaper-1991">
+      <schema:name>TODO_NEWSPAPER_OR_JOURNAL</schema:name>
+      <!-- authority -->
+      <!-- <schema:sameAs rdf:resource="https://www.wikidata.org/entity/Q..."/> -->
+   </schema:Organization>
+   
+</rdf:RDF>
